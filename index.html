@@ -1,14 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title> 大事件后台布局 </title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
 </head>
 
-<body>
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">
+                <img src="/assets/images/logo.png" alt="">
+            </div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 个人中心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">基本资料</a></dd>
+                        <dd><a href="">更换头像</a></dd>
+                        <dd><a href="">重置密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="layui-icon layui-icon-logout" style="font-size: 18px;"></i> &nbsp;退出
+                    </a>
+                </li>
+            </ul>
+        </div>
 
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree " lay-filter="test" lay-shrink="all">
+                    <li class="layui-nav-item layui-this">
+                        <a href="">
+                            <i class="layui-icon layui-icon-loading" style="font-size: 18px;"></i> &nbsp;首页</a>
+                    </li>
+                    <li class="layui-nav-item ">
+                        <a class="" href="javascript:;"><i class="layui-icon layui-icon-survey" style="font-size: 18px;"></i> &nbsp;文章管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-slider" style="font-size: 18px;"></i> &nbsp;文章类别</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-slider" style="font-size: 18px;"></i> &nbsp;文章列表</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-slider" style="font-size: 18px;"></i> &nbsp;发表文章</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="layui-icon layui-icon-friends" style="font-size: 18px;"></i> &nbsp;个人中心</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;基本资料</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;更换头像</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;重置密码</a></dd>
+
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">内容主体区域</div>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            © layui.com - 底部固定区域
+        </div>
+    </div>
+    <script src="/assets/lib/layui/layui.all.js"></script>
 </body>
 
 </html>
