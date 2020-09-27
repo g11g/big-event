@@ -13,27 +13,32 @@
     <div class="layui-card">
         <div class="layui-card-header">修改用户信息</div>
         <div class="layui-card-body">
-            <form class="layui-form" action="">
+            <!-- 登录名称 -->
+            <form class="layui-form" lay-filter="formTest" action="">
                 <div class="layui-form-item">
                     <label class="layui-form-label">登录名称</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="oldPwd" id="oldPwd" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                        <input type="text" name="username" disabled required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
                     </div>
                 </div>
+                <!-- 用户昵称 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户昵称</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="newPwd" id="newPwd" required lay-verify="required" placeholder="请输入昵称" autocomplete="off" class="layui-input">
+                        <input type="text" name="nickname" required lay-verify="required" placeholder="请输入昵称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
+                <!-- 用户邮箱 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户邮箱</label>
                     <div class="layui-input-inline">
-                        <input type="text" required lay-verify="required" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+                        <input type="text" name="email" required lay-verify="required|email" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
                     </div>
                 </div>
+                <!-- 按钮 -->
                 <div class="layui-form-item">
                     <div class="layui-input-block">
+                        <input type="hidden" name="id">
                         <button class="layui-btn" lay-submit lay-filter="formDemo">提交修改</button>
                         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                     </div>
@@ -45,7 +50,7 @@
     <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/user/repwd.js"></script>
+    <script src="/assets/js/user/userinfo.js"></script>
 </body>
 
 </html>

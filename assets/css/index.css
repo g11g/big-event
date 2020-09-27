@@ -19,12 +19,15 @@ iframe {
 
 .userimg {
     display: inline-block;
-    width: 31px;
-    height: 31px;
+    width: 40px;
+    height: 40px;
     background-color: #009688;
     border-radius: 50%;
-    line-height: 31px;
+    line-height: 40px;
     text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 10px;
 }
 
 .layui-nav-img,

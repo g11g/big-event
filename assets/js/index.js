@@ -4,7 +4,7 @@ function renderUser() {
         url: '/my/userinfo',
         success: function(res) {
             if (res.status === 0) {
-                console.log(res)
+
                 let name = res.data.nickname || res.data.username;
                 $('.username').text(name);
                 if (res.data.user_pic) {
