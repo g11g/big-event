@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title> 大事件后台布局 </title>
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 
 <body class="layui-layout-body">
@@ -18,7 +19,7 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 个人中心
+                        <span class="userimg">G</span> <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 个人中心
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a href="">基本资料</a></dd>
@@ -37,6 +38,10 @@
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <div class="userinfo">
+                    <span class="userimg">G</span>
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 欢迎 <span class="username">小黑</span>
+                </div>
                 <ul class="layui-nav layui-nav-tree " lay-filter="test" lay-shrink="all">
                     <li class="layui-nav-item layui-this">
                         <a href="">
@@ -53,9 +58,9 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;"><i class="layui-icon layui-icon-friends" style="font-size: 18px;"></i> &nbsp;个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;更换头像</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;重置密码</a></dd>
+                            <dd><a href="http://www.baidu.com" target="fm"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;基本资料</a></dd>
+                            <dd><a href="http://www.qq.com" target="fm"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;更换头像</a></dd>
+                            <dd><a href="https://www.qq.com" target="fm"><i class="layui-icon layui-icon-edit" style="font-size: 18px;"></i> &nbsp;重置密码</a></dd>
 
                         </dl>
                     </li>
@@ -65,7 +70,8 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">内容主体区域</div>
+            <!-- <div style="padding: 15px;">内容主体区域</div> -->
+            <iframe src="/home/dashboard.html" frameborder="0" name="fm"></iframe>
         </div>
 
         <div class="layui-footer">
