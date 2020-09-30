@@ -76,3 +76,18 @@ $('.search').on('submit', function(e) {
     data.pagenum = 1;
     renderArticle();
 })
+
+// 注册模板
+template.defaults.imports.dataFormat = function(str) {
+    function forZero(n) {
+        return n < 10 ? '0' + n : n;
+    }
+    let date = new Date(str);
+    let y = date.getFullYear();
+    let m = forZero(date.getMonth() + 1);
+    let d = forZero(date.getDate());
+    let h = forZero(date.getHours());
+    let i = forZero(date.getMinutes());
+    let s = forZero(date.getSeconds());
+    return [y, m, d].join('-') + ' ' + [h, i, s].join(':');
+}
