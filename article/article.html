@@ -80,11 +80,11 @@
         <tr>
             <td>{{item.title}}</td>
             <td>{{item.cate_name}}</td>
-            <td>{{item.pub_date|dataFormat}}</td>
+            <td>{{item.pub_date}}</td>
             <td>{{item.state}}</td>
             <td>
                 <button type="button" class="layui-btn  layui-btn-xs">编辑</button>
-                <button class="layui-btn  layui-btn-xs layui-btn-danger">删除</button>
+                <button class="layui-btn  layui-btn-xs layui-btn-danger" data-id="{{item.Id}}">删除</button>
             </td>
         </tr>
         {{/each}}

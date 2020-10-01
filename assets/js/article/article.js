@@ -15,7 +15,7 @@ function renderArticle() {
         data,
         success: function(res) {
             if (res.status === 0) {
-                console.log(res)
+                // console.log(res)
                 let html = template('tpl-list', res);
                 $('tbody').html(html);
                 //分页回调函数的形参
@@ -91,3 +91,22 @@ template.defaults.imports.dataFormat = function(str) {
     let s = forZero(date.getSeconds());
     return [y, m, d].join('-') + ' ' + [h, i, s].join(':');
 }
+
+//--------------------------删除功能-------------
+$('body').on('click', 'button:contains("删除")', function() {
+    let id = $(this).data('id')
+    layer.confirm('确定删除吗?', { icon: 3, title: '提示' }, function(index) {
+        $.ajax({
+            url: '/my/article/delete/' + id,
+            success: function(res) {
+                layer.msg(res.message);
+                if (res.status === 0) {
+                    renderArticle();
+                }
+            }
+        })
+
+        layer.close(index);
+    });
+
+})
